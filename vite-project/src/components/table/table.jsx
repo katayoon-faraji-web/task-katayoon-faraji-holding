@@ -27,8 +27,8 @@ const TableUsers = () =>{
     const userList = useSelector((state) => state.users.value);
     const modals = useSelector((state) => state.modals.value);
     const openVisitModalFunction = ({id,Fname,Lname,code}) =>{
-        dispatch(openVisitModal())
-        dispatch(setUser({id,Fname,Lname,code}))
+      dispatch(openVisitModal())
+      dispatch(setUser({id,Fname,Lname,code}))
     }
     const openEditModalFunction = ({id,Fname,Lname,code}) =>{
       dispatch(openEditModal())

@@ -21,6 +21,11 @@ export default function EditModal() {
   const [LnameInput,setLnameInput] = React.useState(selectedUserInfo.Lname)
   const [codeInput,setCodeInput] = React.useState(selectedUserInfo.code)
   const windowWidthInfo = useSelector(state=>state.windowWidth.value)
+  useEffect(()=>{
+    setNameInput(selectedUserInfo.Fname)
+    setLnameInput(selectedUserInfo.Lname)
+    setCodeInput(selectedUserInfo.code)
+  },[selectedUserInfo.id])
 
   const style = {
     position: 'absolute' ,
