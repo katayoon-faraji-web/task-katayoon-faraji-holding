@@ -66,7 +66,7 @@ export default function AccordionSearch() {
                             width:"100%",
                             minHeight:"60px",
                             flexWrap:"wrap",
-                            justifyContent:windowWidthInfo<=1400?'end':'start',
+                            justifyContent:windowWidthInfo<=1400?'center':'start',
                             alignItems:'center'
                         }}
                         noValidate
@@ -74,18 +74,18 @@ export default function AccordionSearch() {
                         >
                         <Box direction="row" spacing={2} className='w-full  xl:w-[22%] h-[40px] mt-[10px] xl:mt-0 xl:h-full text-white flex justify-start items-center'>
                             <Typography className='w-[100px] xl:w-auto' fontFamily={'font1'}>نام</Typography>
-                            <TextField fontFamily={'font1'} value={nameInput} onChange={(event)=>{setNameInput(event.target.value)}} variant="outlined" sx={{height:'40px' , width:windowWidthInfo<=1400?'400px':"200px" ,overflow:'hidden' ,border:'1px solid white' ,borderRadius:'5px',color:"white",marginX:'3px'}} />
+                            <TextField fontFamily={'font1'} value={nameInput} onChange={(event)=>{setNameInput(event.target.value)}} variant="outlined" sx={{height:'40px' , width:windowWidthInfo<=1300?'400px':"200px" ,overflow:'hidden' ,border:'1px solid white' ,borderRadius:'5px',color:"white",marginX:'3px'}} />
                         </Box>
                         <Box direction="row" spacing={2} className=' w-full  xl:w-[30%] h-[40px] mt-[10px] xl:mt-0 xl:h-full text-white flex justify-start items-center'>
                             <Typography className='w-[100px] xl:w-auto' fontFamily={'font1'}>نام حانوادگی</Typography>
-                            <TextField fontFamily={'font1'} value={LnameInput} onChange={(event)=>{setLnameInput(event.target.value)}} variant="outlined" size='medium' sx={{height:'40px' , width:windowWidthInfo<=1400?'400px':"200px" ,overflow:'hidden' ,border:'1px solid white' ,color:"white",borderRadius:'5px',marginX:'3px'}} />
+                            <TextField fontFamily={'font1'} value={LnameInput} onChange={(event)=>{setLnameInput(event.target.value)}} variant="outlined" size='medium' sx={{height:'40px' , width:windowWidthInfo<=1300?'400px':"200px" ,overflow:'hidden' ,border:'1px solid white' ,color:"white",borderRadius:'5px',marginX:'3px'}} />
                         </Box>
                         <Box direction="row" spacing={2} className=' w-full  xl:w-[30%] h-[40px] mt-[10px] xl:mt-0 xl:h-full text-white flex justify-start items-center'>
                             <Typography className='w-[100px] xl:w-auto' fontFamily={'font1'}>کد ملی</Typography>
-                            <TextField fontFamily={'font1'} value={codeInput} onChange={(event)=>{setCodeInput(event.target.value)}} variant="outlined" sx={{height:'40px' , width:windowWidthInfo<=1400?'400px':"200px" ,overflow:'hidden' ,border:'1px solid white' ,color:"white",borderRadius:'5px',marginX:'3px',display:'flex',alignItems:'center'}} />
+                            <TextField fontFamily={'font1'} value={codeInput} onChange={(event)=>{setCodeInput(event.target.value)}} variant="outlined" sx={{height:'40px' , width:windowWidthInfo<=1300?'400px':"200px" ,overflow:'hidden' ,border:'1px solid white' ,color:"white",borderRadius:'5px',marginX:'3px',display:'flex',alignItems:'center'}} />
                         </Box>
                        
-                        <Button onClick={searchFunction}  sx={{width:'150px', height:'40px' ,color:"white" ,background:"#fc9a1d" ,border:'1px solid #fc9a1d',fontFamily:"font1",fontSize:"20px",fontWeight:'500' , marginTop:windowWidthInfo<=1400?'20px':"0", marginLeft:windowWidthInfo<=1400?'15px':"0"}}  variant='contained' >جستجو</Button>
+                        <Button onClick={searchFunction}  sx={{width:'150px', height:'40px' ,color:"white" ,background:"#fc9a1d" ,border:'1px solid #fc9a1d',fontFamily:"font1",fontSize:"20px",fontWeight:'500' , marginTop:windowWidthInfo<=1300?'20px':"0", marginLeft:windowWidthInfo<=1300?'15px':"0"}}  variant='contained' >جستجو</Button>
                     </Box>
                 </Stack>
                 {searched && (

@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 import { Box ,Typography ,Modal} from '@mui/material';
 import { useSelector,useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { closeChartModal, closeMapModal } from '../../redux/store/modalsReducer';
+import { closeMapModal } from '../../redux/store/modalsReducer';
 import ClearIcon from '@mui/icons-material/Clear';
 
 
@@ -86,7 +86,6 @@ function MapBox({Props}){
   };
 
   return (
-    // Important! Always set the container height explicitly
     <div style={{ height: '100%', width: '100%' }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "" }}
